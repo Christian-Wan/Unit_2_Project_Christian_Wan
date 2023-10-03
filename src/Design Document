@@ -4,11 +4,11 @@ Instance Variables:
     private int yOne (Will store the value of the first y value)
     private int xTwo (Will store the value of the second x value)
     private int yTwo (Will store the value of the second y value)
-    private int xThree (Will store the value of the x coordinate
+    private int xThree (Will store the value of the x coordinate)
 
 
 Constructor
-    Public void coordinatePoint(String coordinateOne, String coordinateTwo) (stores coordinates to instance variables)
+    Public void LinearEquation(String coordinateOne, String coordinateTwo) (stores coordinates to instance variables)
     - will get the values of each x and y by making substrings that only contain the numbers
     - will parse the substrings into int
     - will store the first coordinate x and y to xOne and yOne respectively, will do the same with the second coordinate
