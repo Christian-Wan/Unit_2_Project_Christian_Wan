@@ -1,0 +1,66 @@
+LinearEquation class
+Instance Variables:
+    private int xOne (Will store the value of the first x value)
+    private int yOne (Will store the value of the first y value)
+    private int xTwo (Will store the value of the second x value)
+    private int yTwo (Will store the value of the second y value)
+    private int xThree (Will store the value of the x coordinate
+
+
+Constructor
+    Public void coordinatePoint(String coordinateOne, String coordinateTwo) (stores coordinates to instance variables)
+    - will get the values of each x and y by making substrings that only contain the numbers
+    - will parse the substrings into int
+    - will store the first coordinate x and y to xOne and yOne respectively, will do the same with the second coordinate
+
+Methods
+
+    Public double slopeCalculate() (Will find the slope of the line)
+    - finds slope with ((yTwo - yOne) / (xTwo - xOne))
+    - will use Math.round to round to nearest hundredth
+    - returns the slope
+
+    Public double yInterceptCalculate() (Will find the y-intercept of the line)
+    - finds y-intercept by taking the slope and multiplying it with one of the coordinate pair x coordinates and subtracting that from the y coordinate of that same pair
+        yOne - (slopeCalculate() * xOne)
+    - will use Math.round to round to nearest hundredth
+    -returns the y-intercept
+
+    Public String equationForm() (Will find the slope intercept form)
+    - creates a string that will concat the slope and y-intercept to make the equation
+    - will make m a fraction by doing ((yTwo - yOne) + "/" + (xTwo - xOne))
+    - returns the slope intercept form
+
+    Public double distanceCalculate() (Finds the distance between the two points)
+    - finds distance by using a^2 + b^2 = c^2 where we are finding c
+    - a and b will be found by subtracting the coordinate pairs with each other
+    - will use Math.round to round to nearest hundredth
+
+    Public String solvePoint(int xThree) (Will find the coordinate point of specified x value)
+    - will find the point by using y = mx + b
+    - returns the coordinates
+
+    Public String toString() (Will return both coordinate pairs, slope, y-intercept, slope intercept form, difference between points)
+    - Will be returned like this
+        First pair: (xOne, yOne)
+        Second pair: (xTwo, yTwo)
+        Slope of line: (Slope of line)
+        Y-intercept: (y-intercept)
+        Slope intercept form: (y = mx + b)
+        Distance between points: (distance between points)
+
+
+
+EquationRunner.java
+- Will have scanner class
+variables:
+String coordinateOne (will store the first coordinate pair given by the user)
+String coordinateTwo (will store the second coordinate pair given by the user)
+int xThree (will store the x coordinate given by the user)
+
+
+Step 1: Ask for first coordinate
+Step 2: Ask for second coordinate
+Step 3: Use toString() to print out all of the information on the equation
+Step 4: Ask for a x coordinate
+Step 5: Print coordinates using solvePoint() to find the coordinates
