@@ -4,7 +4,6 @@ Instance Variables:
     private int yOne (Will store the value of the first y value)
     private int xTwo (Will store the value of the second x value)
     private int yTwo (Will store the value of the second y value)
-    private int xThree (Will store the value of the x coordinate)
 
 
 Constructor
@@ -17,6 +16,7 @@ Methods
 
     Public double slopeCalculate() (Will find the slope of the line)
     - finds slope with ((yTwo - yOne) / (xTwo - xOne))
+    - Typecast one of the variables to double
     - will use Math.round to round to nearest hundredth
     - returns the slope
 
@@ -34,11 +34,12 @@ Methods
     Public double distanceCalculate() (Finds the distance between the two points)
     - finds distance by using a^2 + b^2 = c^2 where we are finding c
     - a and b will be found by subtracting the coordinate pairs with each other
+    - Typecast one of the variables to double
     - will use Math.round to round to nearest hundredth
 
     Public String solvePoint(int xThree) (Will find the coordinate point of specified x value)
     - will find the point by using y = mx + b
-    - returns the coordinates
+    - returns the coordinates as doubles
 
     Public String toString() (Will return both coordinate pairs, slope, y-intercept, slope intercept form, difference between points)
     - Will be returned like this
@@ -58,9 +59,9 @@ String coordinateOne (will store the first coordinate pair given by the user)
 String coordinateTwo (will store the second coordinate pair given by the user)
 int xThree (will store the x coordinate given by the user)
 
-
-Step 1: Ask for first coordinate
-Step 2: Ask for second coordinate
-Step 3: Use toString() to print out all of the information on the equation
-Step 4: Ask for a x coordinate
-Step 5: Print coordinates using solvePoint() to find the coordinates
+Step 1: Welcomes and gives format for how user should input coordinates
+Step 2: Ask for first coordinate
+Step 3: Ask for second coordinate
+Step 4: Use toString() to print out all of the information on the equation
+Step 5: Ask for a x coordinate
+Step 6: Print coordinates using solvePoint() to find the coordinates
